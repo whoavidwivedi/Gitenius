@@ -21,6 +21,9 @@ export const metadata: Metadata = {
         description: 'AI-Powered GitHub Profiler',
         images: ['/og.png'],
     },
+    alternates: {
+        canonical: 'https://gitenius.vercel.app',
+    },
 };
 
 export default function RootLayout({
