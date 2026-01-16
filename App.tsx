@@ -360,10 +360,6 @@ const App: React.FC = () => {
           <span className="text-primary">Gitenius V1</span>
           <span className="opacity-20">|</span>
           <span>© {new Date().getFullYear()}</span>
-          <span className="opacity-20">|</span>
-          <Link href="/sponsor" className="hover:text-primary transition-colors">
-            Sponsor
-          </Link>
         </div>
       </footer>
 
