@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://gitenius.vercel.app'),
     title: 'Gitenius',
     description: 'AI-Powered GitHub Profiler',
     openGraph: {
