@@ -11,7 +11,7 @@ export const analyzeProfile = async (user: GithubUser, repos: GithubRepo[]): Pro
     lang: r.language
   }));
 
-  const response = await fetch('/gitenius/api/gemini', {
+  const response = await fetch('/api/gemini', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
