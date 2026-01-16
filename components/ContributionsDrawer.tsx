@@ -34,7 +34,7 @@ export const ContributionsDrawer: React.FC<ContributionsDrawerProps> = ({ isOpen
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=all`);
+            const response = await fetch(`/api/contributions?username=${username}`);
             if (!response.ok) throw new Error('Failed to fetch contributions');
 
             const json: ApiResponse = await response.json();
