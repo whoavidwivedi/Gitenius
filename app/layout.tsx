@@ -6,8 +6,20 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-    title: 'GitGenius',
+    title: 'Gitenius',
     description: 'AI-Powered GitHub Profiler',
+    openGraph: {
+        title: 'Gitenius',
+        description: 'AI-Powered GitHub Profiler',
+        images: ['/og.png'],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Gitenius',
+        description: 'AI-Powered GitHub Profiler',
+        images: ['/og.png'],
+    },
 };
 
 export default function RootLayout({
