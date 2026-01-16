@@ -119,14 +119,6 @@ const App: React.FC = () => {
           >
             Sponsor
           </Link>
-          <a
-            href="https://github.com/whoavidwivedi/gitenius"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-500 hover:text-white transition-colors"
-          >
-            Repo
-          </a>
         </div>
         {user && !isLoading ? (
           <div className="flex gap-6 items-center">
