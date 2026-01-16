@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   Generator Mode (.printing class)
+   ========================================= */
+
+.printing {
+  background-color: #030303 !important;
+  color: white !important;
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.printing nav,
+.printing .no-print {
+  display: none !important;
+}
+
+/* Scale the main app container to fit A4 Landscape */
+/* Since we removed the wrapper, we target the main div. 
+   React usually renders to #root, but our App returns a div. 
+   We will rely on the fact that DownloadButton adds .printing to body 
+   and we can target .printing > div.min-h-screen (the App root). */
+.printing>div.min-h-screen {
+  transform: scale(0.60);
+  /* Significant scale down to fit single page */
+  transform-origin: top center;
+  width: 166%;
+  /* 100 / 0.60 ~= 166% width compensation */
+  margin: 0 auto;
+  min-height: 0 !important;
+  /* Adjust specific spacings for print */
+  padding: 2rem !important;
+}
+
+.printing section {
+  margin-bottom: 2rem !important;
+  break-inside: avoid;
+}
+
+/* =========================================
+   Native Print Dialog (@media print)
+   ========================================= */
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+}
+
+
+/* =========================================
+   Utilities
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
+}
