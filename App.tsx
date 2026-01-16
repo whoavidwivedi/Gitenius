@@ -113,12 +113,7 @@ const App: React.FC = () => {
           <div className="h-0.5 w-0 group-hover:w-full bg-primary transition-all duration-300" />
         </div>
         <div className="text-[10px] font-bold tracking-widest uppercase flex items-center gap-6">
-          <Link
-            href="/sponsor"
-            className="text-muted hover:text-primary transition-colors border border-zinc-800 px-3 py-1.5 rounded hover:border-primary/50 hidden md:block"
-          >
-            Sponsor
-          </Link>
+          {/* Header Actions */}
         </div>
         {user && !isLoading ? (
           <div className="flex gap-6 items-center">
@@ -180,6 +175,15 @@ const App: React.FC = () => {
                 {isLoading ? 'PROCESSING...' : 'INITIALIZE'}
               </button>
             </form>
+
+            <div className="mt-8">
+              <Link
+                href="/sponsor"
+                className="text-[10px] font-bold tracking-widest uppercase text-zinc-500 hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-0.5"
+              >
+                Support the Project
+              </Link>
+            </div>
 
             {error && (
               <div className="mt-8 p-4 border border-red-900/50 bg-red-900/5 text-red-400 text-xs font-bold uppercase tracking-widest">
